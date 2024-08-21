@@ -1,2 +1,2 @@
-# my-portfolio
-Este repositorio contiene el código fuente de mi portafolio web personal, desarrollado con Python, Django, HTML, y CSS. El portafolio está diseñado para mostrar mis habilidades y proyectos como programador backend
+# My Portfolio
+This repository contains the source code of my personal web portfolio, developed with Python, Django, HTML, and CSS. The portfolio is designed to showcase my skills and projects as a backend developer.
