@@ -6,25 +6,27 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #b9d7d9;
     grid-template-columns: 200px 1fr;
     grid-template-rows: 1fr;
+    z-index: -1;
 }
 
 .container {
     box-sizing: border-box;
     padding: 20px;
     margin: 20px;
-    background-color: #46382f;
-    border: 8px solid #000;
+    background-color: #668284;
+    border: 8px solid #2a2829;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 200px #00000071;
+    z-index: 0;
 }
 
 /* HOME CONTENT */
 .content-home{
     text-align: start;
-    color: #747474;
+    color: #7b3b3b;
     margin-bottom: 10px;
 }
 
@@ -37,17 +39,26 @@ body {
 
 .content-home p {
     font-size: 1.8em;
-    color: #666;
     margin-bottom: 20px;
 }
 
 /* NAVIGATION */
 nav{
     height: 100%;
-    background-color: #666;
-    border-right: 8px solid #000;
+    background-color: #668284;
+    border-right: 8px solid #2a2829;
+    z-index: 1;
+    
 }
 
-.nav-list {
-
+.nav-image {
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: 48px;
+}
+.nav-image div{
+    
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/ElTomyDev.jpeg");
 }
