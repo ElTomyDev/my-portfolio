@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    {% include 'portfolio/navegation.html' %}
-
-    <main>
+    <nav>
+    {% include 'portfolio/navigation.html' %}
+    </nav>
+    <main class="container">
         {% block content %}{% endblock %}
+        {% block projects %}{% endblock %}
     </main>
 
     {% block footer %}{% endblock %}
