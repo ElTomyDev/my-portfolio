@@ -30,7 +30,7 @@ body::before {
     margin: 20px;
     background-color: #22333b;
     border: 5px solid #0a0908;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 0px 200px #00000071;
 }
 
