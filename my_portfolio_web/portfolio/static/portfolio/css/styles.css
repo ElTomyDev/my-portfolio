@@ -111,6 +111,10 @@ nav{
     .nav-list ul {
         font-size: 1em; /* Reduce el tamaño de la fuente de la lista en pantallas más pequeñas */
     }
+    nav{
+        border-right: 0px solid #2a2829;
+        border-bottom: 8px solid #2a2829;
+    }
 }
 
 /* Estilos para pantallas medianas y grandes */
