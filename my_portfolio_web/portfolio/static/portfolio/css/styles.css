@@ -7,9 +7,8 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #b9d7d9;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr;
-    z-index: -1;
+    grid-template-columns: 1fr; /* Ajusta la columna a una sola en pantallas pequeñas */
+    grid-template-rows: auto; /* Ajusta la fila para que crezca según el contenido */
 }
 
 .container {
@@ -20,7 +19,6 @@ body {
     border: 8px solid #2a2829;
     border-radius: 10px;
     box-shadow: 0px 0px 200px #00000071;
-    z-index: 0;
 }
 
 /* HOME CONTENT */
@@ -44,21 +42,136 @@ body {
 
 /* NAVIGATION */
 nav{
-    height: 100%;
     background-color: #668284;
     border-right: 8px solid #2a2829;
-    z-index: 1;
-    
 }
 
 .nav-image {
     box-sizing: border-box;
     margin-top: 10px;
-    margin-left: 48px;
+    text-align: center;
 }
+
 .nav-image div{
-    
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     background-image: url("../images/ElTomyDev.jpeg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: -2px -2px 10px #000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-list ul{
+    list-style: none;
+    font-size: 1.3em;
+}
+
+.nav-list ul li {
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.nav-list ul li a{
+    text-decoration: none;
+    color: #7b3b3b;
+}
+
+.nav-list ul li a:hover{
+    color: #000;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Ajusta la columna a una sola en pantallas pequeñas */
+        grid-template-rows: auto; /* Ajusta la fila para que crezca según el contenido */
+    }
+
+    .container {
+        margin: 10px; /* Reduce el margen en pantallas más pequeñas */
+        padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .content-home h1 {
+        font-size: 3em; /* Reduce el tamaño de la fuente del título en pantallas más pequeñas */
+    }
+
+    .content-home p {
+        font-size: 1.2em; /* Reduce el tamaño de la fuente del párrafo en pantallas más pequeñas */
+    }
+
+    .nav-image div {
+        width: 100px; /* Reduce el tamaño del div con la imagen en pantallas más pequeñas */
+        height: 100px; /* Reduce el tamaño del div con la imagen en pantallas más pequeñas */
+    }
+
+    .nav-list ul {
+        font-size: 1em; /* Reduce el tamaño de la fuente de la lista en pantallas más pequeñas */
+    }
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 769px) {
+    body {
+        grid-template-columns: 200px 1fr; /* Ajusta la disposición a dos columnas en pantallas medianas y grandes */
+        grid-template-rows: 1fr; /* Mantiene una sola fila en pantallas medianas y grandes */
+    }
+
+    nav {
+        height: 100%; /* Asegura que el nav ocupe toda la altura disponible en pantallas medianas y grandes */
+    }
+
+    .container {
+        margin: 20px; /* Mantiene un margen adecuado en pantallas medianas y grandes */
+        padding: 20px; /* Mantiene un padding adecuado en pantallas medianas y grandes */
+    }
+
+    .content-home h1 {
+        font-size: 4.5em; /* Mantiene el tamaño de la fuente del título en pantallas medianas y grandes */
+    }
+
+    .content-home p {
+        font-size: 1.8em; /* Mantiene el tamaño de la fuente del párrafo en pantallas medianas y grandes */
+    }
+
+    .nav-image div {
+        width: 150px; /* Mantiene el tamaño del div con la imagen en pantallas medianas y grandes */
+        height: 150px; /* Mantiene el tamaño del div con la imagen en pantallas medianas y grandes */
+    }
+
+    .nav-list ul {
+        font-size: 1.3em; /* Mantiene el tamaño de la fuente de la lista en pantallas medianas y grandes */
+    }
+}
+
+/* Estilos para pantallas muy grandes */
+@media (min-width: 1200px) {
+    body {
+        grid-template-columns: 300px 1fr; /* Ajusta la disposición a dos columnas en pantallas muy grandes */
+    }
+
+    .container {
+        margin: 30px; /* Aumenta el margen en pantallas muy grandes */
+        padding: 30px; /* Aumenta el padding en pantallas muy grandes */
+    }
+
+    .content-home h1 {
+        font-size: 5em; /* Aumenta el tamaño de la fuente del título en pantallas muy grandes */
+    }
+
+    .content-home p {
+        font-size: 2em; /* Aumenta el tamaño de la fuente del párrafo en pantallas muy grandes */
+    }
+
+    .nav-image div {
+        width: 200px; /* Aumenta el tamaño del div con la imagen en pantallas muy grandes */
+        height: 200px; /* Aumenta el tamaño del div con la imagen en pantallas muy grandes */
+    }
+
+    .nav-list ul {
+        font-size: 1.5em; /* Aumenta el tamaño de la fuente de la lista en pantallas muy grandes */
+    }
 }
