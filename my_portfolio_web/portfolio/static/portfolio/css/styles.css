@@ -3,10 +3,13 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     color: #eae0d5;
     position: relative; /* Necesario para el pseudo-elemento */
+    min-height: 100vh;
 }
 body::before {
     content: "";
@@ -32,6 +35,7 @@ body::before {
     border: 6px solid #0a0908;
     border-radius: 20px;
     box-shadow: 0px 0px 200px #00000071;
+    min-height: calc(100vh - 40px);
 }
 
 /* HOME CONTENT */
@@ -54,8 +58,12 @@ body::before {
 
 /* NAVIGATION */
 nav{
+    height: 100vh;
+    width: 100%;
     background-color: #22333b;
     border-right: 6px solid #0a0908;
+    top: 0;
+    left: 0;
 }
 
 .nav-image {
@@ -190,5 +198,67 @@ nav{
 
     .nav-list ul {
         font-size: 1.5em; /* Aumenta el tamaño de la fuente de la lista en pantallas muy grandes */
+    }
+}
+
+/* Estilos para pantallas muy grandes */
+@media (min-width: 1600px) {
+    body {
+        grid-template-columns: 350px 1fr; /* Ajusta la disposición a dos columnas más grandes */
+        padding: 20px; /* Añade un padding global para asegurar que el contenido no toque los bordes */
+    }
+
+    .container {
+        margin: 40px; /* Aumenta el margen en pantallas muy grandes */
+        padding: 40px; /* Aumenta el padding en pantallas muy grandes */
+        max-width: 1400px; /* Limita el ancho máximo del contenedor para mejorar la legibilidad */
+    }
+
+    .content-home h1 {
+        font-size: 5.5em; /* Aumenta el tamaño de la fuente del título */
+    }
+
+    .content-home p {
+        font-size: 2.2em; /* Aumenta el tamaño de la fuente del párrafo */
+    }
+
+    .nav-image div {
+        width: 220px; /* Aumenta el tamaño del div con la imagen */
+        height: 220px; /* Aumenta el tamaño del div con la imagen */
+    }
+
+    .nav-list ul {
+        font-size: 1.7em; /* Aumenta el tamaño de la fuente de la lista */
+    }
+}
+
+/* Estilos para pantallas ultra grandes */
+@media (min-width: 1980px) {
+    body {
+        grid-template-columns: 400px 1fr; /* Ajusta la disposición a dos columnas más grandes */
+        padding: 40px; /* Añade más padding para pantallas muy grandes */
+    }
+
+    .container {
+        margin: 50px; /* Aumenta el margen en pantallas ultra grandes */
+        padding: 50px; /* Aumenta el padding en pantallas ultra grandes */
+        max-width: 1600px; /* Limita el ancho máximo del contenedor para evitar líneas de texto muy largas */
+    }
+
+    .content-home h1 {
+        font-size: 6em; /* Aumenta aún más el tamaño de la fuente del título */
+    }
+
+    .content-home p {
+        font-size: 2.5em; /* Aumenta el tamaño de la fuente del párrafo */
+    }
+
+    .nav-image div {
+        width: 250px; /* Aumenta el tamaño del div con la imagen */
+        height: 250px; /* Aumenta el tamaño del div con la imagen */
+    }
+
+    .nav-list ul {
+        font-size: 1.8em; /* Aumenta el tamaño de la fuente de la lista */
     }
 }
