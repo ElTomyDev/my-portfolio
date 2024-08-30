@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 
-class Project(models.Model()):
+class Project(models.Model):
     title = models.CharField(max_length=200)
-    description = models.CharField(max_length=340)
-    image = models.ImageField(upload_to='projects/')
+    description = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='')
     link = models.URLField()
     
     
