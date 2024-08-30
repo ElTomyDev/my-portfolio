@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Mi Portafolio{% endblock %}</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/navigation.css' %}">
 </head>
 <body>
     {% include 'portfolio/navigation.html' %}
-    
     <main class="container">
         {% block home %}{% endblock %}
         {% block projects %}{% endblock %}
     </main>
-
     {% block footer %}{% endblock %}
 </body>
 </html>
