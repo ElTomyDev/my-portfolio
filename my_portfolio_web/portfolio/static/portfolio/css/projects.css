@@ -22,9 +22,12 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.project-card img {
+.card-image{
+    background-image: url("{{ project.image.url }}");
     width: 100%;
-    height: auto;
+    height: 200px;
+    max-height: 10px;
+
 }
 
 .project-card h2 {
